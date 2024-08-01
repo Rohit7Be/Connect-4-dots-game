@@ -1,130 +1,93 @@
-body {
+*{
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
-    background-color:black;
-  }
-  .wrapper {
-    width: 33.75em;
-    background-color: gray;
-    position: absolute;
-    padding: 2em;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 1.25em;
-    border-radius: 0.5em;
-  }
-  .container {
-    margin: 1.25em auto;
-    width: 33.75em;
-    border-radius: 0.6em;
-    overflow: hidden;
-    background-color: blue;
-  }
-  .container:hover{
-    background-color: black;
-  }
-
-  #information {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-  }
-  .player-wrappers {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-  .player1:before {
-    content: "";
-    display: inline-block;
-    width: 3.12em;
-    height: 3.12em;
-    border-radius: 50%;
-    background: radial-gradient(#fff04e 1.12em, #ffc400 1.25em);
-  }
-  .player2:before {
-    content: "";
-    display: inline-block;
-    width: 3.12em;
-    height: 3.12em;
-    border-radius: 50%;
-    background: radial-gradient(#ff4747 1.12em, #c00303 1.25em);
-  }
-  #playerTurn {
-    margin: 1em 0;
-    text-align: right;
-  }
-  #playerTurn span {
-    font-weight: 600;
-  }
-  .startScreen {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(135deg,#153677,#4e085f);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .startScreen button {
-    background-color: #ffffff;
-    font-size: 1.4em;
-    padding: 1em 2em;
-    border: none;
-    outline: none;
-    border-radius: 2em;
-    cursor: pointer;
-  }
-  .startScreen button:hover{
-    background-color: transparent;
-    border: 1px solid black;
-    transition: 0.3s;
-  }
-  .grid-row {
-    margin: 0 auto;
-    display: flex;
-
-  }
-  .grid-row:hover{
-    background-color: transparent;
-    display: flex;
-
-    
-    transition: 0.2s;
-    align-items: flex-start;
-    
-  }
-
-  .grid-box {
-    width: 5em;
-    height: 5em;
+}
+body{
     display: grid;
     place-items: center;
-    background: radial-gradient(white 1.37em, black 1.43em);
-    cursor: pointer;
-  }
-  .hide {
-    display: none;
-  }
-  #message {
-    margin-top: auto;
-    margin-bottom: 1em;
-    color: #fffafa;
-    font-size: x-large;
-    font-family: cursive;
-  }
-  footer{
-    background-color: #333;
-    width: 100%;
-    margin-top: auto;
-    color: #fff;
+    background-color: rgb(50, 48, 48);
+}
+
+h1{
     text-align: center;
-    padding: 5px 5px;
-  }
-  footer p{
-    font-family: sans-serif;
-    font-size: small;
-  }
+    margin: 20px 0 20px 0;
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    text-decoration: wavy;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: cursive;
+    color: red;
+    background-color: black;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    border: 4px solid black;
+   width: 630px;
+   background-color: rgb(64, 64, 64);
+   box-shadow: 10px 10px 15px rgba(138, 135, 135, 0.3);
+   
+    
+  
+}
+
+ul{
+    display: grid;
+    place-items: center;
+    
+}
+
+ul p{
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 100px;
+    background-color: rgb(188, 181, 181);
+}
+
+ul:hover{
+    cursor: pointer;
+    background-color: rgb(163, 165, 171);
+}
+
+
+@media(max-width:700px){
+    .board{
+        width: 500px;
+    }
+    ul p{
+        width: 55px;
+        height: 55px;
+        
+    }
+    
+}
+@media(max-width:520px){
+    .board{
+        width: 400px;
+    }
+    ul p{
+        width: 40px;
+        height: 40px;
+        
+    }
+    
+}
+@media(max-width:420px){
+    .board{
+        width: 320px;
+    }
+    ul p{
+        width: 30px;
+        height: 30px;
+        
+    }
+    
+}
