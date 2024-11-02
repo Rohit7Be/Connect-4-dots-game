@@ -56,6 +56,19 @@ ul:hover{
     cursor: pointer;
     background-color: rgb(163, 165, 171);
 }
+footer {
+    margin-top: 5rem;
+    
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+}
+
+footer p {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
 
 
 @media(max-width:700px){
